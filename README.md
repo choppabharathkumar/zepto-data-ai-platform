@@ -100,7 +100,9 @@ This module will contain:
 
 ---
 
-## Installation
+## Installation & Setup
+
+> **Requirements approach:** This project uses **per-module `requirements.txt` files** — one inside each module folder. There is no single consolidated root-level requirements file. Install only the module you intend to run.
 
 Clone the repository:
 
@@ -109,13 +111,21 @@ git clone https://github.com/choppabharathkumar/zepto-data-ai-platform.git
 cd zepto-data-ai-platform
 ```
 
-Install dependencies for the module you want to run:
+Install dependencies per module:
 
 ```bash
+# Module 1 — Data Pipeline
 pip install -r data_pipeline/requirements.txt
+
+# Module 2 — Analytics  (once built)
+pip install -r analytics/requirements.txt
+
+# Module 3 — Support Assistant  (once built)
+pip install -r support_assistant/requirements.txt
 ```
 
 ---
+
 
 ## Running the Project
 
