@@ -6,6 +6,7 @@ categories/books schema, and loading a cleaned pandas DataFrame into it.
 """
 
 import sqlite3
+from pathlib import Path
 
 import pandas as pd
 
@@ -33,7 +34,7 @@ CREATE TABLE IF NOT EXISTS books (
 """
 
 
-def get_connection(db_path: str = DB_PATH) -> sqlite3.Connection:
+def get_connection(db_path: "str | Path" = DB_PATH) -> sqlite3.Connection:
     """Open (and implicitly create) the SQLite database file."""
     return sqlite3.connect(db_path)
 

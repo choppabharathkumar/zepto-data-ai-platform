@@ -18,6 +18,8 @@ import sqlite3
 
 import pandas as pd
 
+from constants import OUTPUTS_DIR, SQL_DIR
+
 # --------------------------------------------------------------------------
 # Named queries
 # --------------------------------------------------------------------------
@@ -65,10 +67,43 @@ def run_query(conn: sqlite3.Connection, name: str) -> pd.DataFrame:
     return pd.read_sql(QUERIES[name], conn)
 
 
+def save_queries_to_sql_files() -> None:
+    """
+    Write every named query to its own .sql file inside SQL_DIR.
+    This makes each query independently readable on GitHub without
+    having to open Python source.
+    """
+    SQL_DIR.mkdir(parents=True, exist_ok=True)
+    for name, sql in QUERIES.items():
+        sql_path = SQL_DIR / f"{name}.sql"
+        sql_path.write_text(sql.strip(), encoding="utf-8")
+    print(f"[sql_queries] SQL files saved -> {SQL_DIR}/")
+
+
+def save_query_outputs_to_txt(results: dict[str, pd.DataFrame]) -> None:
+    """
+    Write the result DataFrame of every query to a plain-text file
+    inside OUTPUTS_DIR so the outputs are visible on GitHub without
+    running the pipeline.
+    """
+    OUTPUTS_DIR.mkdir(parents=True, exist_ok=True)
+    for name, df in results.items():
+        out_path = OUTPUTS_DIR / f"{name}.txt"
+        with out_path.open("w", encoding="utf-8") as fh:
+            fh.write(f"-- {name} --\n\n")
+            fh.write(df.to_string(index=False))
+            fh.write("\n")
+    print(f"[sql_queries] Query outputs saved -> {OUTPUTS_DIR}/")
+
+
 def run_all_queries(conn: sqlite3.Connection) -> dict[str, pd.DataFrame]:
     """
     Execute every query in QUERIES, print its SQL and its output, and
     return {query_name: result_dataframe} so callers can reuse the results.
+
+    Also persists:
+      - each query string as  sql/<query_name>.sql
+      - each result table as  outputs/query_outputs/<query_name>.txt
     """
     results = {}
     for name, sql in QUERIES.items():
@@ -77,6 +112,11 @@ def run_all_queries(conn: sqlite3.Connection) -> dict[str, pd.DataFrame]:
         df = run_query(conn, name)
         print(df.to_string(index=False))
         results[name] = df
+
+    # Persist artifacts
+    save_queries_to_sql_files()
+    save_query_outputs_to_txt(results)
+
     return results
 
 

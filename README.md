@@ -2,7 +2,7 @@
 
 ## Overview
 
-Zepto Data & AI Platform is an end-to-end Artificial Intelligence and Machine Learning capstone project. The repository contains three integrated modules that demonstrate the workflow of a real AI/ML engineer, from collecting raw data to building analytics and deploying an AI-powered support assistant.
+Zepto Data & AI Platform is an end-to-end Artificial Intelligence and Machine Learning capstone project. The repository contains three integrated modules that demonstrate the workflow of a real AI/ML engineer — from collecting raw data to building analytics and deploying an AI-powered support assistant.
 
 | Module | Status | Marks |
 | ------- | ------ | ----- |
@@ -12,13 +12,29 @@ Zepto Data & AI Platform is an end-to-end Artificial Intelligence and Machine Le
 
 ---
 
-# Repository Structure
+## Repository Structure
 
 ```
 zepto-data-ai-platform/
 │
-├── analytics/
 ├── data_pipeline/
+│   ├── data/
+│   │   ├── raw/                  ← raw scraped CSV
+│   │   └── processed/            ← cleaned, typed CSV
+│   ├── sql/                      ← one .sql file per query
+│   ├── outputs/
+│   │   └── query_outputs/        ← one .txt file per query result
+│   ├── books.db                  ← SQLite database
+│   ├── constants.py
+│   ├── utils.py
+│   ├── scraper.py
+│   ├── database_manager.py
+│   ├── sql_queries.py
+│   ├── main.py
+│   ├── requirements.txt
+│   └── README.md
+│
+├── analytics/
 ├── support_assistant/
 ├── .gitignore
 └── README.md
@@ -26,140 +42,107 @@ zepto-data-ai-platform/
 
 ---
 
-# Modules
+## Modules
 
-## 1. Data Pipeline
+### 1. Data Pipeline
 
-The Data Pipeline module scrapes book data from the Books to Scrape website, cleans the data, stores it in a relational SQLite database, and performs SQL and Pandas analysis.
+Scrapes book data from [books.toscrape.com](https://books.toscrape.com/),
+cleans the data with pandas, stores it in a two-table normalised SQLite
+database, and executes 6 SQL queries covering all required clauses.
 
-### Technologies
+**Fixed exchange rate:** `1 GBP = 105.50 INR` (project-defined constant,
+no live API, no date reference — per the capstone specification).
 
-- Python
-- Requests
-- BeautifulSoup
-- Pandas
-- SQLite3
+#### Technologies
 
-### Features
+- Python · Requests · BeautifulSoup · Pandas · SQLite3
 
-- Web scraping
-- Pagination handling
-- Multiple category scraping
-- Data cleaning
-- Currency conversion (GBP → INR)
-- SQLite database
-- SQL queries
-- Pandas integration
-
-### Run
+#### Run
 
 ```bash
-cd data_pipeline
-pip install -r requirements.txt
-python main.py
+# Install (from repo root)
+pip install -r data_pipeline/requirements.txt
+
+# Run
+python data_pipeline/main.py
 ```
+
+See [`data_pipeline/README.md`](data_pipeline/README.md) for the full
+7-stage pipeline description, directory layout, SQL query index, and
+design decisions.
 
 ---
 
-## 2. Analytics
+### 2. Analytics
 
-Status
-
-```
-In Progress
-```
+**Status: In Progress**
 
 This module will contain:
 
-- Data preprocessing
-- Exploratory Data Analysis
-- Machine Learning
-- Model Evaluation
-- Visualizations
+- Titanic dataset cleaning & EDA
+- Feature engineering
+- Classification & regression models
+- Model evaluation (accuracy, F1, ROC)
+- Saved ML pipeline
 
 ---
 
-## 3. Support Assistant
+### 3. Support Assistant
 
-Status
-
-```
-In Progress
-```
+**Status: In Progress**
 
 This module will contain:
 
-- Retrieval-Augmented Generation (RAG)
-- Document Search
-- Vector Database
-- Large Language Model Integration
-- Question Answering
+- Offline-first RAG system with ChromaDB
+- LangGraph-based retrieval & routing
+- FastAPI REST interface
+- Docker deployment
 
 ---
 
-# Installation
+## Installation
 
-Clone the repository
+Clone the repository:
 
 ```bash
 git clone https://github.com/choppabharathkumar/zepto-data-ai-platform.git
-```
-
-Move into the project
-
-```bash
 cd zepto-data-ai-platform
 ```
 
-Install dependencies for the required module.
-
-Example:
+Install dependencies for the module you want to run:
 
 ```bash
-cd data_pipeline
-pip install -r requirements.txt
+pip install -r data_pipeline/requirements.txt
 ```
 
 ---
 
-# Running the Project
+## Running the Project
 
 ### Data Pipeline
 
 ```bash
-cd data_pipeline
-python main.py
+python data_pipeline/main.py
 ```
 
-Analytics and Support Assistant modules will be added in future commits.
+Outputs are written to `data_pipeline/data/`, `data_pipeline/sql/`,
+`data_pipeline/outputs/`, and `data_pipeline/books.db`.
+
+Analytics and Support Assistant modules will be documented here when complete.
 
 ---
 
-# Design Decisions
+## Repository Workflow
 
-### Data Pipeline
+Git is managed using a feature branch workflow:
 
-- Scraped data from Books to Scrape.
-- Scraped at least three categories.
-- Handled pagination automatically.
-- Stored data in a normalized SQLite database.
-- Used two related tables with Primary Key and Foreign Key.
-- Implemented SQL queries.
-- Verified SQL JOIN results using Pandas.
+- Feature branch created for each sprint.
+- At least two commits per branch.
+- Merged back into `main` when the sprint is complete.
 
 ---
 
-# Repository Workflow
-
-Git was managed using a feature branch workflow.
-
-- Created a feature branch.
-- Made multiple commits.
-- Merged into the main branch.
-
----
-
-# Author
+## Author
 
 **Choppa Bharath Kumar**
 

@@ -1,0 +1,72 @@
+-- books_in_selected_categories --
+
+                                                                                            title      category_name  price_gbp
+                                                                               Tipping the Velvet Historical Fiction      53.74
+                        Forever and Forever: The Courtship of Henry Longfellow and Fanny Appleton Historical Fiction      29.69
+                                                          A Flight of Arrows (The Pathfinders #2) Historical Fiction      55.53
+                                                                            The House by the Lake Historical Fiction      36.95
+                                                                                     Mrs. Houdini Historical Fiction      30.25
+                                                                        The Marriage of Opposites Historical Fiction      28.08
+                                                  Glory over Everything: Beyond The Kitchen House Historical Fiction      45.84
+                                                                             Love, Lies and Spies Historical Fiction      20.55
+                                                                                A Paris Apartment Historical Fiction      39.01
+                                                                                      Lilac Girls Historical Fiction      17.28
+                                                       The Constant Princess (The Tudor Court #1) Historical Fiction      16.62
+                                                                           The Invention of Wings Historical Fiction      37.34
+                                                  World Without End (The Pillars of the Earth #2) Historical Fiction      32.97
+                                                                            The Passion of Dolssa Historical Fiction      28.32
+                                                                        Girl With a Pearl Earring Historical Fiction      26.77
+                                                                           Voyager (Outlander #3) Historical Fiction      21.07
+                                                                                     The Red Tent Historical Fiction      35.66
+                                                                 The Last Painting of Sara de Vos Historical Fiction      55.55
+                                                The Guernsey Literary and Potato Peel Pie Society Historical Fiction      49.53
+                                                                            Girl in the Blue Coat Historical Fiction      46.83
+                                                                           Between Shades of Gray Historical Fiction      20.79
+                                                                              While You Were Mine Historical Fiction      41.32
+                                                                                The Secret Healer Historical Fiction      34.56
+                                                                                         Starlark Historical Fiction      25.83
+                                                                            Lost Among the Living Historical Fiction      27.70
+                                                A Spy's Devotion (The Regency Spies of London #1) Historical Fiction      16.97
+                                                                                    Sharp Objects            Mystery      47.82
+                                                                             In a Dark, Dark Wood            Mystery      19.63
+                                                                              The Past Never Ends            Mystery      56.50
+                                                                                 A Murder in Time            Mystery      16.64
+                                                  The Murder of Roger Ackroyd (Hercule Poirot #4)            Mystery      44.10
+                                                                   The Last Mile (Amos Decker #2)            Mystery      54.21
+                                                           That Darkness (Gardiner and Renner #1)            Mystery      13.92
+                                                             Tastes Like Fear (DI Marnie Rome #3)            Mystery      10.69
+                                                           A Time of Torment (Charlie Parker #14)            Mystery      48.35
+                                                          A Study in Scarlet (Sherlock Holmes #1)            Mystery      16.73
+                                                                 Poisonous (Max Revere Novels #3)            Mystery      26.80
+                                            Murder at the 42nd Street Library (Raymond Ambler #1)            Mystery      54.36
+                                                                                      Most Wanted            Mystery      35.28
+                                                                       Hide Away (Eve Duncan #20)            Mystery      11.84
+                                                                    Boar Island (Anna Pigeon #19)            Mystery      59.48
+                                                                                        The Widow            Mystery      27.26
+                                                                                Playing with Fire            Mystery      13.71
+                                What Happened on Beale Street (Secrets of the South Mysteries #2)            Mystery      25.37
+                         The Bachelor Girl's Guide to Murder (Herringford and Watts Mysteries #1)            Mystery      52.30
+                                                 Delivering the Truth (Quaker Midwife Mystery #1)            Mystery      20.89
+                                              The Mysterious Affair at Styles (Hercule Poirot #1)            Mystery      24.80
+                                                            In the Woods (Dublin Murder Squad #1)            Mystery      38.38
+                                                                The Silkworm (Cormoran Strike #2)            Mystery      23.05
+                                                                                       The Exiled            Mystery      43.45
+                                                        The Cuckoo's Calling (Cormoran Strike #1)            Mystery      19.21
+                                                               Extreme Prey (Lucas Davenport #26)            Mystery      25.40
+                                                              Career of Evil (Cormoran Strike #3)            Mystery      24.72
+                           The No. 1 Ladies' Detective Agency (No. 1 Ladies' Detective Agency #1)            Mystery      57.70
+                                                                                The Girl You Lost            Mystery      12.29
+                                                        The Girl In The Ice (DCI Erika Foster #1)            Mystery      15.85
+                                                             Blood Defense (Samantha Brinkman #1)            Mystery      20.30
+                                                              1st to Die (Women's Murder Club #1)            Mystery      53.98
+                                                                          It's Only the Himalayas             Travel      45.17
+                                 Full Moon over Noah’s Ark: An Odyssey to Mount Ararat and Beyond             Travel      49.43
+                               See America: A Celebration of Our National Parks & Treasured Sites             Travel      48.87
+                              Vagabonding: An Uncommon Guide to the Art of Long-Term World Travel             Travel      36.94
+                                                                             Under the Tuscan Sun             Travel      37.33
+                                                                               A Summer In Europe             Travel      44.34
+                                                                         The Great Railway Bazaar             Travel      30.54
+                                                                 A Year in Provence (Provence #1)             Travel      56.88
+The Road to Little Dribbling: Adventures of an American in Britain (Notes From a Small Island #2)             Travel      23.21
+                                                        Neither Here nor There: Travels in Europe             Travel      38.95
+                                                               1,000 Places to See Before You Die             Travel      26.08

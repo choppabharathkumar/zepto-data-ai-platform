@@ -7,6 +7,30 @@ exchange rate, or the database path ever need to change, this is the only
 file that should need editing.
 """
 
+from pathlib import Path
+
+# --------------------------------------------------------------------------
+# Directory layout
+# --------------------------------------------------------------------------
+# All paths are anchored to *this file's* location so the pipeline always
+# writes its outputs inside data_pipeline/ regardless of where you invoke
+# `python` from (e.g. repo root vs. inside the subdirectory).
+MODULE_DIR: Path = Path(__file__).parent
+
+# Intermediate data artefacts
+DATA_DIR: Path = MODULE_DIR / "data"
+RAW_DIR: Path = DATA_DIR / "raw"
+PROCESSED_DIR: Path = DATA_DIR / "processed"
+
+# SQL query files (one .sql per named query)
+SQL_DIR: Path = MODULE_DIR / "sql"
+
+# Human-readable query result files (one .txt per named query)
+OUTPUTS_DIR: Path = MODULE_DIR / "outputs" / "query_outputs"
+
+# SQLite database
+DB_PATH: Path = MODULE_DIR / "books.db"
+
 # --------------------------------------------------------------------------
 # Source website
 # --------------------------------------------------------------------------
@@ -42,11 +66,8 @@ REQUEST_HEADERS: dict = {
 POLITE_DELAY_SECONDS: float = 0.2
 
 # --------------------------------------------------------------------------
-# Database
-# --------------------------------------------------------------------------
-DB_PATH: str = "books.db"
-
 # Rating words used on the site map to these integers.
+# --------------------------------------------------------------------------
 RATING_WORD_TO_INT: dict = {
     "Zero": 0,
     "One": 1,

@@ -1,0 +1,13 @@
+-- top_rated_books_by_category --
+
+     category_name                                                             title  rating  price_gbp
+           Mystery                                                 The Girl You Lost       5      12.29
+Historical Fiction                 A Spy's Devotion (The Regency Spies of London #1)       5      16.97
+Historical Fiction                                            Between Shades of Gray       5      20.79
+Historical Fiction                                            Voyager (Outlander #3)       5      21.07
+           Mystery                                 The Silkworm (Cormoran Strike #2)       5      23.05
+           Mystery What Happened on Beale Street (Secrets of the South Mysteries #2)       5      25.37
+            Travel                                1,000 Places to See Before You Die       5      26.08
+Historical Fiction                                             The Passion of Dolssa       5      28.32
+Historical Fiction                                                      Mrs. Houdini       5      30.25
+Historical Fiction                                                      The Red Tent       5      35.66

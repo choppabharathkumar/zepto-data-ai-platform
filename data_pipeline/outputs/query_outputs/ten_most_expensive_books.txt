@@ -1,0 +1,13 @@
+-- ten_most_expensive_books --
+
+                                                                 title  price_gbp
+                                         Boar Island (Anna Pigeon #19)      59.48
+The No. 1 Ladies' Detective Agency (No. 1 Ladies' Detective Agency #1)      57.70
+                                      A Year in Provence (Provence #1)      56.88
+                                                   The Past Never Ends      56.50
+                                      The Last Painting of Sara de Vos      55.55
+                               A Flight of Arrows (The Pathfinders #2)      55.53
+                 Murder at the 42nd Street Library (Raymond Ambler #1)      54.36
+                                        The Last Mile (Amos Decker #2)      54.21
+                                   1st to Die (Women's Murder Club #1)      53.98
+                                                    Tipping the Velvet      53.74
