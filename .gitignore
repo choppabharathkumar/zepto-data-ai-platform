@@ -27,5 +27,8 @@ Thumbs.db
 .vscode/
 .idea/
 
+# ChromaDB — generated at runtime by ingest.py
+support_assistant/chroma_db/
+
 # Large model files (tracked separately)
 # analytics/models/*.joblib  ← keep this tracked, it's a required deliverable
