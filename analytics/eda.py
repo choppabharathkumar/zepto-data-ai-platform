@@ -229,7 +229,9 @@ def plot_correlation(df):
 
     # Find top 2 off-diagonal pairs by absolute correlation value
     corr_abs = corr.abs().copy()
-    np.fill_diagonal(corr_abs.values, 0)
+    arr = corr_abs.to_numpy().copy()
+    np.fill_diagonal(arr, 0)
+    corr_abs = pd.DataFrame(arr, index=corr_abs.index, columns=corr_abs.columns)
     flat = corr_abs.unstack().sort_values(ascending=False)
 
     seen, pairs = set(), []

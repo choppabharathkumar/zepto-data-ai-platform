@@ -522,7 +522,7 @@ def save_and_reload_pipeline(best_pipeline, X_test):
     print(f"    Sample raw input:\n{sample.to_string()}")
     print(f"    Predicted class: {prediction[0]}  "
           f"(Not Survived prob={probability[0]:.3f}, Survived prob={probability[1]:.3f})")
-    print("    Pipeline accepts raw features and preprocesses automatically. ✓")
+    print("    Pipeline accepts raw features and preprocesses automatically. [OK]")
 
 
 # ── Entry point ───────────────────────────────────────────────────────────────
