@@ -1,0 +1,6 @@
+Fare Regression Results — Linear Regression
+=============================================
+MAE: 24.4711
+RMSE: 60.104
+R2: 0.302
+Adjusted_R2: 0.2548
